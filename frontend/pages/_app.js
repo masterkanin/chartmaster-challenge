@@ -1,13 +1,12 @@
-import '../styles/globals.css';
-import { Provider } from 'react-redux';
-import { store } from '../lib/store';
+import '../styles/globals.css'
+import { AuthProvider } from '../lib/auth'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps })  {
   return (
-    <Provider store={store}>
+    <AuthProvider>
       <Component {...pageProps} />
-    </Provider>
-  );
+    </AuthProvider>
+  )
 }
 
-export default MyApp;
+export default MyApp
